@@ -3,6 +3,7 @@ package com.helloworld.Springbootcode.service;
 import com.helloworld.Springbootcode.entity.Department;
 import com.helloworld.Springbootcode.repository.DepartmentRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
