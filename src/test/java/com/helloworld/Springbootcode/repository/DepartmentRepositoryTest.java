@@ -2,6 +2,7 @@ package com.helloworld.Springbootcode.repository;
 
 import com.helloworld.Springbootcode.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -18,6 +19,8 @@ class DepartmentRepositoryTest {
     @Autowired
     private TestEntityManager entityManager;
 
+    // The dummy data will be created and persisted during the running of test method
+    // Once test method is finished, the data is flushed
     @BeforeEach
     void setUp() {
         Department department =
@@ -31,6 +34,7 @@ class DepartmentRepositoryTest {
     }
 
     @Test
+    @DisplayName("Get Data Based on Valid Department ID")
     public void whenFindById_thenReturnDepartment(){
         Department department = departmentRepository.findById(1L).get();
         assertEquals(department.getDepartmentName(),"Mechanical Engineering");
