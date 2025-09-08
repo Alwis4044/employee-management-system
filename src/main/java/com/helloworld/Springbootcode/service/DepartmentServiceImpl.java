@@ -24,7 +24,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Override
-	public List<Department> fetchDepartmentList() {
+	public List<Department> fetchDepartmentList(){
 		// TODO Auto-generated method stub
 		return departmentRepository.findAll();
 	}

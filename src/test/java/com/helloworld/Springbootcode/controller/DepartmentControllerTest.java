@@ -58,7 +58,7 @@ class DepartmentControllerTest {
                         "    \"departmentAddress\":\"Ahmedabad\",\n" +
                         "    \"departmentCode\":\"IT-06\"\n" +
                         "}"))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk()); 
     }
 
     @Test

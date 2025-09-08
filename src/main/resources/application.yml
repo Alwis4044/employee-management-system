@@ -45,6 +45,12 @@ spring:
 welcome:
   message: Welcome to Spring Boot Code!!
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "beans,env"
 ---
 
 spring:
